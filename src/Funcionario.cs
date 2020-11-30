@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Text;
 
 namespace src
@@ -22,7 +23,7 @@ namespace src
 
         public override string ToString()
         {
-            return Nome + ", R$ " + SalarioLiquido();
+            return Nome + ", R$ " + SalarioLiquido().ToString("F2", CultureInfo.InvariantCulture);
         }
     }
 }
